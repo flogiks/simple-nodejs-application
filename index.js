@@ -9,7 +9,7 @@ const axios = require("axios");
 const getAuthSessionToken = async () => {
   try {
     const token = await axios.post(
-      "https://api.sandbox.getknit.dev/auth.createSession",
+      "https://api.sandbox.getknit.dev/v1.0/auth.createSession",
       {
         originOrgId: "Rapido",
         originOrgName: "Rapido",
