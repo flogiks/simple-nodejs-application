@@ -9,22 +9,23 @@ const axios = require("axios");
 const getAuthSessionToken = async () => {
   try {
     const token = await axios.post(
-      "https://api.sandbox.getknit.dev/v1.0/auth.createSession",
+      "https://api.getknit.dev/v1.0/auth.createSession",
       {
-        originOrgId: "Rapido",
-        originOrgName: "Rapido",
+        originOrgId: "Rapido1",
+        originOrgName: "Rapido1",
         originUserEmail: "nischal@superbeings.ai",
         originUserName: "Nischal Chenna",
       },
       {
         headers: {
           Authorization:
-            "Bearer 09e8b0adebb2df4bfc205be8ffe9e3c24297c37d4e005286b2f3bab773e5e24f",
+            "Bearer ba12085b33fd501eae7dbc154f7f546e6a25f69d1b3503ad1a2ee228f39f23d3",
         },
       }
     );
     return token.data;
   } catch (err) {
+    console.error(err);
     throw new Error("Unable to get a token.");
   }
 };
